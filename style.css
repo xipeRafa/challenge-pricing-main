@@ -23,6 +23,8 @@
       /* (Text) */
       --dark-desaturated-blue: hsl(227, 35%, 25%);
       /* (Text & CTA Background) */
+      --dark-hover-blue: hsl(227, 32%, 43%);
+      /* (Text & CTA Background) */
       --break-point: 650px;
     }
     
@@ -113,6 +115,10 @@
       font-weight: 800;
       letter-spacing: -1px;
       padding-right: 4px;
+      
+    }
+    .month{
+          margin-left: .5rem;
     }
 
     .pricing-component__header p:first-of-type {
@@ -158,8 +164,8 @@
     .pointer .toggle_shape:after {
       transition: 0.15s linear;
       content: "";
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       display: block;
       background-color: #fff;
       border-radius: 50%;
@@ -214,6 +220,14 @@
 
     .pricing-component__start-btn {
       background: var(--dark-desaturated-blue);
+      color: var(--pale-blue);
+      border-radius: 100px;
+      border: 0;
+      padding: 0.74rem 2.5rem;
+      cursor: pointer;
+    }
+    .pricing-component__start-btn:hover {
+      background: var(--dark-hover-blue);
       color: var(--pale-blue);
       border-radius: 100px;
       border: 0;

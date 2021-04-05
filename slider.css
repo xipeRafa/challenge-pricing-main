@@ -90,7 +90,7 @@
       .pricing-component__controllers {
         display: flex;
         justify-content: center;
-        padding: 0;
+        padding: 3rem 0;
       }
     }
     @media (max-width: 390px) {
