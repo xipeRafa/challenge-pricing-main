@@ -1,31 +1,17 @@
 :root {
-      /* Primary */
-      --soft-cyan: hsl(174, 77%, 80%);
-      /* (Full Slider Bar)*/
-      --strong-cyan: hsl(174, 86%, 45%);
-      /*   (Slider Background)*/
-      --light-grayish-red: hsl(14, 92%, 95%);
-      /*(Discount Background)*/
-      --light-red: hsl(15, 100%, 70%);
-      /*(Discount Text)*/
-      --pale-blue: hsl(226, 100%, 87%);
-      /*(CTA Text)*/
-      /* Neutral */
-      --white: hsl (0, 0%, 100%);
-      /* (Pricing Component Background) */
+
       --very-pale-blue: hsl(230, 100%, 99%);
-      /* (Main Background) */
       --light-grayish-blue-slider: hsl(224, 65%, 95%);
-      /* (Empty Slider Bar) */
       --light-grayish-blue: hsl(223, 50%, 87%);
-      /*(Toggle Background)*/
       --grayish-blue: hsl(225, 20%, 60%);
-      /* (Text) */
       --dark-desaturated-blue: hsl(227, 35%, 25%);
-      /* (Text & CTA Background) */
-      --dark-hover-blue: hsl(227, 32%, 43%);
-      /* (Text & CTA Background) */
-      --break-point: 650px;
+      --dark-hover-blue: hsl(227, 30%, 29%);
+      --soft-cyan: hsl(174, 77%, 80%);
+      --strong-cyan: hsl(174, 86%, 45%);
+      --light-grayish-red: hsl(14, 92%, 95%);
+      --light-red: hsl(15, 100%, 70%);
+      --pale-blue: hsl(226, 100%, 87%);
+      --white: hsl (0, 0%, 100%);
     }
     
     *,
@@ -83,8 +69,7 @@
         0 4.5px 10px rgba(0, 0, 0, 0.02), 0 8px 17.9px rgba(0, 0, 0, 0.024),
         0 15px 33.4px rgba(0, 0, 0, 0.029), 0 36px 80px rgba(0, 0, 0, 0.04);
       --horizontal-padding: 3rem;
-  
-    }
+  }
 
 @media (max-width: 375px) {
       .pricing-component {
@@ -113,12 +98,13 @@
       color: var(--dark-desaturated-blue);
       font-size: 2.74em;
       font-weight: 800;
-      letter-spacing: -1px;
+      letter-spacing: .2px;
       padding-right: 4px;
+      font-family: "Manrope", sans-serif;
       
     }
     .month{
-          margin-left: .5rem;
+       margin-left: .5rem;
     }
 
     .pricing-component__header p:first-of-type {
@@ -151,6 +137,7 @@
     .pointer {
       cursor: pointer;
     }
+
     .pointer .toggle_shape {
       width: 40px;
       height: 20px;
@@ -196,9 +183,11 @@
       padding: 2px 5px;
       letter-spacing: -1;
       background: rgba(255, 140, 102, 0.3);
-      
-    }
-    .discount-badge:after {content: '25% discount'}
+      }
+
+    .discount-badge:after {
+          content: '-25% Discount'
+      }
 
     .pricing-component__footer {
       display: flex;
@@ -226,6 +215,10 @@
       padding: 0.74rem 2.5rem;
       cursor: pointer;
     }
+    .pricing-component__start-btn:focus{
+          outline: none;
+    }
+
     .pricing-component__start-btn:hover {
       background: var(--dark-hover-blue);
       color: var(--pale-blue);

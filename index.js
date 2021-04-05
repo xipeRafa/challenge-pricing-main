@@ -5,18 +5,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const billingMode = document.querySelector("#billing-mode");
     
       function setSlider() {
+         /* The getAttribute() method returns the value of the attribute with the specified name, of an element. */
         const max = slider.getAttribute("max");
-        const width = getComputedStyle(slider).getPropertyValue("--width");
+        console.log('max:',max);
+
+        /* The getComputedStyle() method gets all the actual (computed) CSS property and values of the specified element. */
+        const width = getComputedStyle(slider).getPropertyValue("--width"); /*  --width: 100%; */
         const widthValue = Number(width.slice(0, width.length - 1));
-        console.log('[ widthValue ] >', widthValue)
+        console.log('[ widthValue ] :', widthValue)
     
         const minimumFillWidth = widthValue * 0.03;
         const maximumFillWidthRatio = 0.95;
     
-        function setFilledArea() {
+        function setFilledArea() {   //filling the sliderline
           const fillRation = slider.value / max;
           let fillWidth = fillRation * widthValue * maximumFillWidthRatio;
           if (fillWidth < minimumFillWidth) fillWidth = 0;
+
           slider.style.setProperty("--value", fillWidth + "%");
         }
         setFilledArea();
@@ -57,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         priceDisplay.textContent = price.toFixed(2);
       }
     
+      //----------listenners-----------//
       slider.addEventListener("input", handlePrice);
       billingMode.addEventListener("input", handlePrice);
     
