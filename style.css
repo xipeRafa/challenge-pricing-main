@@ -43,6 +43,7 @@
       font-size: 15px;
       font-family: "Manrope", sans-serif;
       min-height: 100vh;
+      background-color: rgb(240, 240, 240);
     }
 
 
@@ -50,6 +51,16 @@
       text-align: center;
       padding-top: 5rem;
       padding-bottom: 4rem;
+    }
+
+    .container {
+      width: 38%;
+      margin: 0 auto;
+      min-width: 500px;
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
     }
 
 .header__title {
@@ -63,19 +74,23 @@
       color: var(--grayish-blue);
     }    
 .pricing-component {
-      --box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.011), 0 2.4px 5.3px rgba(0, 0, 0, 0.016),
+      background: var(--very-pale-blue);
+      border-radius: 0.5rem;
+      margin-bottom: 5rem;
+       box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.011), 0 2.4px 5.3px rgba(0, 0, 0, 0.016),
         0 4.5px 10px rgba(0, 0, 0, 0.02), 0 8px 17.9px rgba(0, 0, 0, 0.024),
         0 15px 33.4px rgba(0, 0, 0, 0.029), 0 36px 80px rgba(0, 0, 0, 0.04);
       --horizontal-padding: 3rem;
+  
     }
 
-
-    @media (max-width: 375px) {
+@media (max-width: 375px) {
       .pricing-component {
         --horizontal-padding: 1rem;
       }
     }
-    .pricing-component__header {
+
+.pricing-component__header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
@@ -88,7 +103,7 @@
       font-weight: bold;
     }
 
-    .pricing-component__header .slider {
+.pricing-component__header .slider {
       grid-column: 1/-1;
     }
 
@@ -143,8 +158,8 @@
     .pointer .toggle_shape:after {
       transition: 0.15s linear;
       content: "";
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       display: block;
       background-color: #fff;
       border-radius: 50%;
@@ -166,6 +181,7 @@
     .pointer input[type=checkbox]:checked + .toggle_shape:after {
       left: 20px;
     }
+
     .discount-badge {
       font-size: 0.7rem;
       font-weight: 800;
@@ -174,4 +190,36 @@
       padding: 2px 5px;
       letter-spacing: -1;
       background: rgba(255, 140, 102, 0.3);
+      
     }
+    .discount-badge:after {content: '25% discount'}
+
+    .pricing-component__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.9rem var(--horizontal-padding);
+      border-top: 1px solid rgba(133, 143, 173, 0.2);
+    }
+
+    .pricing__features {
+      list-style: georgian inside url(../images/icon-check.svg);
+      list-style-type: none;
+      color: var(--grayish-blue);
+      display: grid;
+      gap: 0.5rem;
+      font-weight: 800;
+      font-size: 0.7rem;
+    }
+
+    .pricing-component__start-btn {
+      background: var(--dark-desaturated-blue);
+      color: var(--pale-blue);
+      border-radius: 100px;
+      border: 0;
+      padding: 0.74rem 2.5rem;
+    }
+
+.r{
+      border: 1px solid red;
+}

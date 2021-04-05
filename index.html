@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | Interactive pricing component</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="slider.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -16,10 +17,8 @@
   </style>
 </head>
 <body>
-  <div>
-
-  </div>
-  <div>
+  
+  <div class="container">
     <header>
       <h1 class="header__title">Simple, traffic-based pricing</h1>
       <p class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
@@ -56,17 +55,17 @@
           </label>
           <p>Yearly Billing</p>
         </div>
-        <span class="discount-badge">25% discount </span>
+        <span class="discount-badge "></span>
       </div>
 
-      <div>
-        <ul>
+      <div class="pricing-component__footer">
+        <ul  class="pricing__features">
           <li>Unlimited websites</li>
           <li>100% data ownership</li>
           <li>Email reports</li>
         </ul>
 
-        <button>Start my trial</button>
+        <button class="pricing-component__start-btn">Start my trial</button>
       </div>
     </article>
     
@@ -75,6 +74,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-  <script src="index.js"></script
+  <script src="index.js"></script>
+
 </body>
 </html>
