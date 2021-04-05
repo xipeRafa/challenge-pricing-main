@@ -15,25 +15,64 @@
   </style>
 </head>
 <body>
+  <div>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+  </div>
+  <div>
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p >Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
+    <article >
+      <div>
 
-  Pageviews
-  $ /month
+        <!-- --- pageviewsDisplay --- -->
+        <p><span class="pageviews-display">100K</span> pageviews</p>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+        <p>
+          <!-- ---- priceDisplay ---- -->
+          <span>$<span class="price-display">16.00</span> </span>
+          /month
+        </p>
+        <!-- ---- slider       CustomSlider ---- -->
+        <input
+          type="range"
+          min="0"
+          max="4"
+          value="3"
+          class="CustomSlider"  
+          id="price-range"
+        />
+      </div>
+      <div>
+        <div>
+          <p>Monthly Billing</p>
+          <label>
+            <!--  ----    billingMode ----  -->
+            <input type="checkbox" id="billing-mode" />
+            <div></div>
+          </label>
+          <p>Yearly Billing</p>
+        </div>
+        <span>25% discount </span>
+      </div>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+      <div>
+        <ul>
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
 
-  Start my trial
+        <button>Start my trial</button>
+      </div>
+    </article>
+    
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="index.js"></script
 </body>
 </html>
