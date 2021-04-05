@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -20,18 +21,18 @@
   </div>
   <div>
     <header>
-      <h1>Simple, traffic-based pricing</h1>
-      <p >Sign-up for our 30-day trial. No credit card required.</p>
+      <h1 class="header__title">Simple, traffic-based pricing</h1>
+      <p class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
     </header>
-    <article >
-      <div>
+    <article class="pricing-component">
+      <div class="pricing-component__header">
 
         <!-- --- pageviewsDisplay --- -->
         <p><span class="pageviews-display">100K</span> pageviews</p>
 
         <p>
           <!-- ---- priceDisplay ---- -->
-          <span>$<span class="price-display">16.00</span> </span>
+          <span class="pricing-component__price">$<span class="price-display">16.00</span> </span>
           /month
         </p>
         <!-- ---- slider       CustomSlider ---- -->
@@ -40,11 +41,11 @@
           min="0"
           max="4"
           value="3"
-          class="CustomSlider"  
+          class="slider CustomSlider"  
           id="price-range"
         />
       </div>
-      <div>
+      <div class="pricing-component__controllers">
         <div>
           <p>Monthly Billing</p>
           <label>
